@@ -1,14 +1,14 @@
-import 'package:carimua/models/artist.dart';
-import 'package:carimua/models/user.dart';
+import 'package:carimua/models/artist_model.dart';
+import 'package:carimua/models/user_model.dart';
 
-class Booking {
-  MakeUpArtist mua;
-  User user;
+class BookingModel {
+  ArtistModel mua;
+  UserModel user;
   int harga;
   DateTime tanggal;
   String status;
 
-  Booking({
+  BookingModel({
     required this.mua,
     required this.user,
     required this.harga,
@@ -16,14 +16,14 @@ class Booking {
     required this.status,
   });
 
-  Booking copyWith({
-    MakeUpArtist? mua,
-    User? user,
+  BookingModel copyWith({
+    ArtistModel? mua,
+    UserModel? user,
     int? harga,
     DateTime? tanggal,
     String? status,
   }) {
-    return Booking(
+    return BookingModel(
       mua: mua ?? this.mua,
       user: user ?? this.user,
       harga: harga ?? this.harga,

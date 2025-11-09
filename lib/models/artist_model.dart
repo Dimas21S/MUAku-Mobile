@@ -1,4 +1,4 @@
-class MakeUpArtist {
+class ArtistModel {
   String nama;
   String email;
   String password;
@@ -6,7 +6,7 @@ class MakeUpArtist {
   String deskripsi;
   String kategori;
 
-  MakeUpArtist({
+  ArtistModel({
     this.nama = '',
     this.email = '',
     this.password = '',
@@ -15,7 +15,7 @@ class MakeUpArtist {
     this.kategori = '',
   });
 
-  MakeUpArtist copyWith({
+  ArtistModel copyWith({
     String? nama,
     String? email,
     String? password,
@@ -23,7 +23,7 @@ class MakeUpArtist {
     String? deskripsi,
     String? kategori,
   }) {
-    return MakeUpArtist(
+    return ArtistModel(
       nama: nama ?? this.nama,
       email: email ?? this.email,
       password: password ?? this.password,
