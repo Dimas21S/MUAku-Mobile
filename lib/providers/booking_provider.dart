@@ -1,5 +1,4 @@
 import 'package:carimua/models/booking_model.dart';
-import 'package:carimua/models/user_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class BookingNotifier extends Notifier<BookingModel> {
