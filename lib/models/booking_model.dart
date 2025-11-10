@@ -2,8 +2,8 @@ import 'package:carimua/models/artist_model.dart';
 import 'package:carimua/models/user_model.dart';
 
 class BookingModel {
-  ArtistModel mua;
-  UserModel user;
+  ArtistModel? mua;
+  UserModel? user;
   int harga;
   DateTime tanggal;
   String status;
