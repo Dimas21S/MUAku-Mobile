@@ -1,9 +1,6 @@
 name: carimua
 description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -13,7 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.8
   http: ^1.5.0
   shared_preferences: ^2.5.3
@@ -22,12 +18,31 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^5.0.0
   custom_lint:
   riverpod_lint: ^3.0.3
 
 flutter:
   uses-material-design: true
+
+    # Daftarkan Gambar (Eksplisit)
   assets:
-    - assets/images/
+    - assets/images/bgLPGCR.png
+    - assets/images/logofullnyah.png
+    - assets/images/about_us.png
+    - assets/images/about_us1.png
+    - assets/images/back_about_us.png
+    - assets/images/contact_us_bg.png
+    - assets/images/gambar wanita.png
+    - assets/images/lphijau.png
+    - assets/images/lpmerah.png
+    - assets/images/lpungu.png
+    - assets/images/lphitam.png
+
+  # Daftarkan Font
+  fonts:
+    - family: DMSerifDisplay
+      fonts:
+        - asset: assets/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf
+        - asset: assets/fonts/DM_Serif_Display/DMSerifDisplay-Italic.ttf
+          style: italic
