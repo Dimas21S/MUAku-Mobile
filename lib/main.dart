@@ -1,4 +1,5 @@
-import 'package:carimua/pages/login.dart';
+import 'package:carimua/pages/contact_us.dart';
+import 'package:carimua/pages/auth/login.dart';
 import 'package:flutter/material.dart';
 import 'pages/about_us.dart';
 import 'pages/landing_page.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginPage(),
         '/about': (context) => const AboutUsPage(),
+        '/contact': (context) => const ContactUsPage(),
       },
     );
   }
