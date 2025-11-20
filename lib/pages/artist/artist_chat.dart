@@ -31,6 +31,71 @@ class _ArtistChatState extends State<ArtistChat> {
           const SizedBox(width: 10),
         ],
       ),
+
+      body: SafeArea(
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SearchAnchor(
+                builder: (context, controller) {
+                  return SearchBar(
+                    hintText: 'Search...',
+                    controller: controller,
+                    onSubmitted: (value) {},
+                  );
+                },
+                suggestionsBuilder: (context, controller) {
+                  return List<ListTile>.generate(5, (index) {
+                    final suggestion = 'Suggestion $index';
+                    return ListTile(title: Text(suggestion), onTap: () {});
+                  });
+                },
+              ),
+
+              const SizedBox(height: 10),
+
+              SizedBox(
+                height: 30,
+                width: 30,
+                child: Card(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      const CircleAvatar(
+                        radius: 20,
+                        backgroundImage: AssetImage(
+                          'assets/images/logofullnyah.png',
+                        ),
+                      ),
+
+                      const SizedBox(width: 8),
+
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Nama Pengguna',
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+
+                          const SizedBox(height: 3),
+
+                          Text('Kategori MUA', style: TextStyle(fontSize: 5)),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

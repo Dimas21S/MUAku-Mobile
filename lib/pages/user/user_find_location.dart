@@ -8,6 +8,8 @@ class UserFindLocation extends StatefulWidget {
 }
 
 class _UserFindLocationState extends State<UserFindLocation> {
+  String? dropdownValue;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +42,121 @@ class _UserFindLocationState extends State<UserFindLocation> {
           ),
           const SizedBox(width: 10),
         ],
+      ),
+
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Container(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // ------------------ SEARCH + DROPDOWN ------------------
+                Row(
+                  children: [
+                    Expanded(
+                      child: SearchAnchor(
+                        builder: (context, controller) {
+                          return SearchBar(
+                            hintText: 'Search...',
+                            controller: controller,
+                            onSubmitted: (value) {},
+                          );
+                        },
+                        suggestionsBuilder: (context, controller) {
+                          return List<ListTile>.generate(5, (index) {
+                            final suggestion = 'Suggestion $index';
+                            return ListTile(
+                              title: Text(suggestion),
+                              onTap: () {},
+                            );
+                          });
+                        },
+                      ),
+                    ),
+
+                    const SizedBox(width: 8),
+
+                    // -------- Dropdown Fix --------
+                    DropdownButton<String>(
+                      hint: const Text("Filter"),
+                      value: dropdownValue,
+                      onChanged: (value) {
+                        setState(() => dropdownValue = value);
+                      },
+                      items: const [
+                        DropdownMenuItem(
+                          value: 'Option 1',
+                          child: Text('Option 1'),
+                        ),
+                        DropdownMenuItem(
+                          value: 'Option 2',
+                          child: Text('Option 2'),
+                        ),
+                        DropdownMenuItem(
+                          value: 'Option 3',
+                          child: Text('Option 3'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+
+                const SizedBox(height: 20),
+
+                // ------------------- CARD ARTIST -------------------
+                Card(
+                  elevation: 3,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Row(
+                      children: [
+                        const CircleAvatar(
+                          radius: 22,
+                          backgroundImage: AssetImage(
+                            'assets/images/avatar.png',
+                          ),
+                        ),
+
+                        const SizedBox(width: 10),
+
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                'ArtistMUAKU',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              SizedBox(height: 5),
+                              Text(
+                                'Location: Unknown',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        const Icon(Icons.location_on, color: Colors.red),
+                        const SizedBox(width: 5),
+                        const Text("Lokasi"),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

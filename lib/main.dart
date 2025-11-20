@@ -1,5 +1,6 @@
 import 'package:carimua/pages/contact_us.dart';
 import 'package:carimua/pages/auth/login.dart';
+import 'package:carimua/pages/user/user_find_location.dart';
 import 'package:carimua/pages/user/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'pages/about_us.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: LandingPage(),
+      home: UserFindLocation(),
       routes: {
         '/login': (context) => const LoginPage(),
         '/about': (context) => const AboutUsPage(),
