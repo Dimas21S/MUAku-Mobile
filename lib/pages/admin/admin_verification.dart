@@ -37,6 +37,70 @@ class _AdminVerificationState extends State<AdminVerification> {
           const SizedBox(width: 10),
         ],
       ),
+
+      body: SafeArea(
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // CARD CUSTOMER
+              Card(
+                elevation: 3,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
+                    children: [
+                      const CircleAvatar(
+                        radius: 25,
+                        backgroundImage: AssetImage(
+                          'assets/images/logofullnyah.png',
+                        ),
+                      ),
+
+                      const SizedBox(width: 12),
+
+                      // Expanded agar teks tidak overflow
+                      const Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Nama Customer',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+
+                            SizedBox(height: 3),
+
+                            Text(
+                              'Waktu',
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.location_city),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -17,11 +17,15 @@ class _UserFavoriteState extends State<UserFavorite> {
         elevation: 0,
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/');
+            },
             child: const Text('Home', style: TextStyle(color: Colors.black)),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/lokasi');
+            },
             child: const Text(
               'Location',
               style: TextStyle(color: Colors.black),
@@ -35,7 +39,9 @@ class _UserFavoriteState extends State<UserFavorite> {
             ),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/profil');
+            },
             child: const Text('Profile', style: TextStyle(color: Colors.black)),
           ),
           const SizedBox(width: 10),
