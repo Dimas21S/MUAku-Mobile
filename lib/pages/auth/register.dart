@@ -29,7 +29,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                       image: DecorationImage(
-                        image: AssetImage('assets/user_register.png'),
+                        image: AssetImage('assets/images/user_register.png'),
                         fit: BoxFit.cover,
                       ),
                     ),

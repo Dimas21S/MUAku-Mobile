@@ -177,6 +177,15 @@ class _UserFindLocationState extends State<UserFindLocation> {
           ),
         ),
       ),
+
+      bottomNavigationBar: const Padding(
+        padding: EdgeInsets.only(bottom: 8),
+        child: Text(
+          '© 2025 pakaimua. All rights reserved.',
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.black54, fontSize: 12),
+        ),
+      ),
     );
   }
 }

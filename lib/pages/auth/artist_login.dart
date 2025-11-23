@@ -29,7 +29,7 @@ class _ArtistLoginPageState extends State<ArtistLoginPage> {
                     decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                       image: DecorationImage(
-                        image: AssetImage('assets/user_sign_in.png'),
+                        image: AssetImage('assets/images/user_sign_in.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
