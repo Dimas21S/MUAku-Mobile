@@ -54,7 +54,7 @@ class _UserHomeState extends State<UserHome> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                width: 600,
+                width: double.infinity,
                 height: 240,
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -149,8 +149,8 @@ class _UserHomeState extends State<UserHome> {
                 alignment: WrapAlignment.center,
                 children: [
                   SizedBox(
-                    height: 30,
-                    width: 40,
+                    height: 200,
+                    width: 200,
                     child: Card(
                       shape: RoundedRectangleBorder(),
                       child: Column(
