@@ -30,6 +30,26 @@ class _UserToArtistState extends State<UserToArtist> {
         backgroundColor: Color.fromRGBO(228, 207, 206, 1),
         elevation: 0,
       ),
+
+      body: SafeArea(child: Column()),
+
+      bottomNavigationBar: SizedBox(
+        width: 100,
+        height: 80,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            TextFormField(
+              obscureText: false,
+              decoration: InputDecoration(
+                hintText: 'Masukkan pesan',
+                border: OutlineInputBorder(),
+                suffixIcon: Icon(Icons.place),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
