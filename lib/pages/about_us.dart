@@ -22,7 +22,6 @@ class AboutUsPage extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                
                 // BAGIAN HEADER DENGAN GAMBAR
                 Stack(
                   children: [
@@ -42,7 +41,7 @@ class AboutUsPage extends StatelessWidget {
                       top: 10,
                       left: 10,
                       child: GestureDetector(
-                        onTap: () => Navigator.pop(context),
+                        onTap: () => Navigator.pushNamed(context, '/contact'),
                         child: Container(
                           width: 40,
                           height: 40,
@@ -72,7 +71,7 @@ class AboutUsPage extends StatelessWidget {
                                 color: Colors.black54,
                                 offset: Offset(1, 1),
                                 blurRadius: 4,
-                              )
+                              ),
                             ],
                           ),
                         ),
@@ -89,7 +88,9 @@ class AboutUsPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     elevation: 2,
-                    color: Colors.white.withOpacity(0.85), // Semi-transparan putih
+                    color: Colors.white.withOpacity(
+                      0.85,
+                    ), // Semi-transparan putih
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -129,7 +130,9 @@ class AboutUsPage extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(12),
                                     image: DecorationImage(
-                                      image: AssetImage("assets/images/about_us1.png"),
+                                      image: AssetImage(
+                                        "assets/images/about_us1.png",
+                                      ),
                                       fit: BoxFit.cover,
                                     ),
                                   ),

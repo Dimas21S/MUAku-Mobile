@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       ),
 
       // home: LandingPage(),
-      home: UserHome(),
+      home: ArtistBeranda(),
 
       routes: {
         '/about': (context) => const AboutUsPage(),
@@ -59,10 +59,10 @@ class MyApp extends StatelessWidget {
         '/artist-to-user': (context) => const ArtistToUser(),
 
         // Admin
-        '/admin-home': (context) => const AdminVerification(),
+        // '/admin-home': (context) => const AdminVerification(),
 
         // Make Up Artist
-        '/beranda-mua': (context) => const ArtistBeranda(),
+        // '/beranda-mua': (context) => const ArtistBeranda(),
         '/chat-mua': (context) => const ArtistChat(),
         '/submit-request': (context) => const SubmitRequest(),
       },

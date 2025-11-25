@@ -104,7 +104,9 @@ class _ArtistLoginPageState extends State<ArtistLoginPage> {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () => {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/register-mua');
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,
                       shape: RoundedRectangleBorder(

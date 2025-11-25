@@ -29,7 +29,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                       image: DecorationImage(
-                        image: AssetImage('assets/images/user_register.png'),
+                        image: AssetImage('assets/images/user_sign_up.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -141,7 +141,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {
-                      // Handle login logic here
+                      Navigator.pushNamed(context, '/login-mua');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.deepPurple,

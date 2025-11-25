@@ -11,41 +11,47 @@ class _UserHomeState extends State<UserHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Image.asset('assets/images/logofullnyah.png', height: 40),
-        backgroundColor: Colors.white,
-        elevation: 0,
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/');
-            },
-            child: const Text('Home', style: TextStyle(color: Colors.black)),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/lokasi');
-            },
-            child: const Text(
-              'Location',
-              style: TextStyle(color: Colors.black),
+      appBar: PreferredSize(
+        preferredSize: Size.fromWidth(80),
+        child: AppBar(
+          title: Image.asset('assets/images/logofullnyah.png', height: 60),
+          backgroundColor: Colors.white,
+          elevation: 0,
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/');
+              },
+              child: const Text('Home', style: TextStyle(color: Colors.black)),
             ),
-          ),
-          TextButton(
-            onPressed: () {},
-            child: const Text(
-              'Favorites',
-              style: TextStyle(color: Colors.black),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/lokasi');
+              },
+              child: const Text(
+                'Location',
+                style: TextStyle(color: Colors.black),
+              ),
             ),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/profil');
-            },
-            child: const Text('Profile', style: TextStyle(color: Colors.black)),
-          ),
-          const SizedBox(width: 10),
-        ],
+            TextButton(
+              onPressed: () {},
+              child: const Text(
+                'Favorites',
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/profil');
+              },
+              child: const Text(
+                'Profile',
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
+            const SizedBox(width: 10),
+          ],
+        ),
       ),
 
       body: SafeArea(
@@ -58,7 +64,7 @@ class _UserHomeState extends State<UserHome> {
                 height: 240,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage('assets/images/logofullnyah.png'),
+                    image: AssetImage('assets/images/about_us.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -143,70 +149,70 @@ class _UserHomeState extends State<UserHome> {
 
               const SizedBox(height: 10),
 
-              Wrap(
-                spacing: 10,
-                runSpacing: 10,
-                alignment: WrapAlignment.center,
-                children: [
-                  SizedBox(
-                    height: 200,
-                    width: 200,
-                    child: Card(
-                      shape: RoundedRectangleBorder(),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(12),
-                              topRight: Radius.circular(12),
-                            ),
-                            child: SizedBox(
-                              width: double.infinity,
-                              height:
-                                  150, // Tinggi tetap → kotak jika lebar card sebanding
-                              child: Image.asset(
-                                'assets/images/logofullnyah.png',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
+              // Wrap(
+              //   spacing: 10,
+              //   runSpacing: 10,
+              //   alignment: WrapAlignment.center,
+              //   children: [
+              //     SizedBox(
+              //       height: 200,
+              //       width: 200,
+              //       child: Card(
+              //         shape: RoundedRectangleBorder(),
+              //         child: Column(
+              //           mainAxisAlignment: MainAxisAlignment.center,
+              //           children: [
+              //             ClipRRect(
+              //               borderRadius: BorderRadius.only(
+              //                 topLeft: Radius.circular(12),
+              //                 topRight: Radius.circular(12),
+              //               ),
+              //               child: SizedBox(
+              //                 width: double.infinity,
+              //                 height:
+              //                     150, // Tinggi tetap → kotak jika lebar card sebanding
+              //                 child: Image.asset(
+              //                   'assets/images/logofullnyah.png',
+              //                   fit: BoxFit.cover,
+              //                 ),
+              //               ),
+              //             ),
 
-                          Padding(
-                            padding: const EdgeInsets.all(10),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                const Text(
-                                  'Kategori: Artistic',
-                                  style: TextStyle(fontSize: 14),
-                                ),
+              //             Padding(
+              //               padding: const EdgeInsets.all(10),
+              //               child: Column(
+              //                 mainAxisAlignment: MainAxisAlignment.start,
+              //                 children: [
+              //                   const Text(
+              //                     'Kategori: Artistic',
+              //                     style: TextStyle(fontSize: 14),
+              //                   ),
 
-                                const SizedBox(height: 5),
+              //                   const SizedBox(height: 5),
 
-                                const Text(
-                                  'Kategori: Artistic',
-                                  style: TextStyle(fontSize: 14),
-                                ),
+              //                   const Text(
+              //                     'Kategori: Artistic',
+              //                     style: TextStyle(fontSize: 14),
+              //                   ),
 
-                                const SizedBox(height: 10),
+              //                   const SizedBox(height: 10),
 
-                                SizedBox(
-                                  width: double.infinity,
-                                  child: OutlinedButton(
-                                    onPressed: () {},
-                                    child: const Text('Lihat Profil'),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              //                   SizedBox(
+              //                     width: double.infinity,
+              //                     child: OutlinedButton(
+              //                       onPressed: () {},
+              //                       child: const Text('Lihat Profil'),
+              //                     ),
+              //                   ),
+              //                 ],
+              //               ),
+              //             ),
+              //           ],
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
             ],
           ),
         ),

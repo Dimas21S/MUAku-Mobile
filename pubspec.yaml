@@ -38,6 +38,8 @@ flutter:
     - assets/images/lpmerah.png
     - assets/images/lpungu.png
     - assets/images/lphitam.png
+    - assets/images/user_sign_in.png
+    - assets/images/user_sign_up.png
 
   # Daftarkan Font
   fonts:

@@ -31,7 +31,7 @@ class _UserToArtistState extends State<UserToArtist> {
         elevation: 0,
       ),
 
-      body: SafeArea(child: Column()),
+      body: SafeArea(child: Container(padding: EdgeInsets.all(16))),
 
       bottomNavigationBar: SizedBox(
         width: 100,
